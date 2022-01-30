@@ -1,5 +1,6 @@
 package Sudoku
 
+import scala.annotation.tailrec
 import scala.util.Random
 import scala.collection.parallel.CollectionConverters._
 
@@ -39,17 +40,18 @@ object Utils {
     if (g.isValid) inner()
   }
 
+  //working and is pretty fast
   def backtracker(g: Grid, r: Int, c: Int): Boolean = {
 
     var row = r
     var col = c
 
-    if (g.isCompleted && g.isValid) {
+    if (g.isCompleted) {
       println(g.toString)
       return true
     }
 
-    if (col > 8)  {
+    if (col > 8) {
       row += 1
       col = 0
     }
@@ -63,9 +65,35 @@ object Utils {
       if (g.isSafe(row, col, n)) {
         g.update(row, col, n)
         if (backtracker(g, row, col + 1)) return true
+        g.update(row, col, 0)
+        //println(s"backtracking (${row}, ${col}), ${n}")
       }
-      g.update(row, col, 0)
-      println(s"backtracking (${row}, ${col}), ${n}")
+    }
+    false
+  }
+
+  //does not work, or is just very slow
+  def backtrackerIterative(g: Grid): Boolean = {
+
+    for (row <- 0 until 9) {
+      for (col <- 0 until 9) {
+        if (g.cell(row, col) == 0) {
+          for (n <- 1 until 10) {
+            if (g.isSafe(row, col, n)) {
+              g.update(row, col, n)
+              if (g.isCompleted) {
+                println(g.toString)
+                return true
+              }
+              else {
+                if (backtrackerIterative(g)) return true
+              }
+              g.update(row, col, 0)
+              println(s"backtracking (${row}, ${col}), ${n}")
+            }
+          }
+        }
+      }
     }
     false
   }
@@ -89,21 +117,3 @@ object Utils {
     }
   }
 }
-
-/*v.par.foreach(n => {
-      if (g.isSafe(row, col, n)) {
-        g.update(row, col, n)
-        if (backtracker(g, row, col + 1)) return true
-      }
-      g.update(row, col, 0)
-      println("backtracking")
-    })
-
-    for (n <- 1 until 10) {
-      if (g.isSafe(row, col, n)) {
-        g.update(row, col, n)
-        if (backtracker(g, row, col + 1)) return true
-      }
-      g.update(row, col, 0)
-      println("backtracking")
-    }*/

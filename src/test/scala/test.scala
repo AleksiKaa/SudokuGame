@@ -30,26 +30,20 @@ object test extends App {
                          000419005
                          000080079""".filter( alphabet.contains(_) ))
 
-  //Utils.importGrid(c, """
+  Utils.importGrid(c, """530070000
+                         600195000
+                         098000060
+                         800060003
+                         400803001
+                         700020006
+                         060000280
+                         000419005
+                         000080079""".filter( alphabet.contains(_) ))
 
-  //Utils.randomize(c)
 
-  //println(c.toString)
-
-  //Utils.solve(c)
-
-  //println(c.toString)
-
-  //test two valid sudokus
-  //println(a.isValid())
-  //println(a.toString)
-  //println(b.isValid())
-  //println(b.toString)
-  //b.weakestCell()
+  //Utils.backtrackerIterative(b)
   Utils.backtracker(b, 0, 0)
   println(b.toString)
-  //println(b.isValid())
-
 
 }
 
