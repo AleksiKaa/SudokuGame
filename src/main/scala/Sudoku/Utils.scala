@@ -1,8 +1,6 @@
 package Sudoku
 
-import scala.annotation.tailrec
 import scala.util.Random
-import scala.collection.parallel.CollectionConverters._
 
 object Utils {
 
@@ -47,7 +45,6 @@ object Utils {
     var col = c
 
     if (g.isCompleted) {
-      println(g.toString)
       return true
     }
 
@@ -55,6 +52,8 @@ object Utils {
       row += 1
       col = 0
     }
+
+    if (g. isFilled || row > 8) return false
 
     if (g.cell(row, col) != 0) {
       if (col == 8) backtracker(g, row + 1, 0)
@@ -72,7 +71,7 @@ object Utils {
     false
   }
 
-  //does not work, or is just very slow
+  //works very well
   def backtrackerIterative(g: Grid): Boolean = {
 
     for (row <- 0 until 9) {
@@ -82,7 +81,6 @@ object Utils {
             if (g.isSafe(row, col, n)) {
               g.update(row, col, n)
               if (g.isCompleted) {
-                println(g.toString)
                 return true
               }
               else {
@@ -92,6 +90,7 @@ object Utils {
               println(s"backtracking (${row}, ${col}), ${n}")
             }
           }
+          return false
         }
       }
     }

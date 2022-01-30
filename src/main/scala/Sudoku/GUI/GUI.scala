@@ -28,8 +28,8 @@ class GUI extends MainFrame {
     visible = true
   }
 
-  val toolbar = new GridPanel(1, 4) {
-    preferredSize = new Dimension(150, 40)
+  val toolbar = new GridPanel(2, 3) {
+    preferredSize = new Dimension(150, 80)
 
     val checkButton = new gridButtons {
       text = "Check"
@@ -55,8 +55,23 @@ class GUI extends MainFrame {
       }
     }
 
-    val solveButton = new gridButtons {
-      action = new Action("Solve") {
+    val solveButtonBacktrack = new gridButtons {
+
+      action = new Action("Solve with backtracking") {
+        override def apply(): Unit = {
+          Utils.backtracker(game, 0, 0)
+          Utils.backtracker(game, 0, 0) //improve backtracker so that two calls are not needed
+          gridView.contents.foreach(b => {
+            val sb = b.asInstanceOf[sudokuButton]
+            sb.update(game.cell(sb.coords))
+          })
+        }
+      }
+    }
+
+    val solveButtonWeakest = new gridButtons {
+
+      action = new Action("Solve by weakest cell") {
         override def apply(): Unit = {
           Utils.solve(game)
           gridView.contents.foreach(b => {
@@ -66,6 +81,20 @@ class GUI extends MainFrame {
         }
       }
     }
+
+    val solveButtonIterative = new gridButtons {
+
+      action = new Action("Solve by iterative backtracking") {
+        override def apply(): Unit = {
+          Utils.backtrackerIterative(game)
+          gridView.contents.foreach(b => {
+            val sb = b.asInstanceOf[sudokuButton]
+            sb.update(game.cell(sb.coords))
+          })
+        }
+      }
+    }
+
 
     val importButton = new gridButtons {
       text = "Import"
@@ -79,7 +108,7 @@ class GUI extends MainFrame {
                 Utils.importGrid(game, sudoku)
                 gridView.contents.foreach(b => {
                   val sButton = b.asInstanceOf[sudokuButton]
-                  sButton.update(game.cell(sButton.coords))
+                  sButton.reInit(game.cell(sButton.coords))
                 })
               }
               else popup.showInput(null, "Entered string was not long enough", initial = "")
@@ -92,8 +121,10 @@ class GUI extends MainFrame {
 
     contents += checkButton
     contents += randomButton
-    contents += solveButton
     contents += importButton
+    contents += solveButtonWeakest
+    contents += solveButtonBacktrack
+    contents += solveButtonIterative
   }
 
   contents = new BorderPanel {

@@ -72,17 +72,17 @@ class Grid {
     if (r < 3) {
       if (c < 3)           return 0
       if (c >= 3 && c < 6) return 1
-                           return 2
+                                  2
     }
     else if (r < 6) {
       if (c < 3)           return 3
       if (c >= 3 && c < 6) return 4
-                           return 5
+                                  5
     }
     else {
       if (c < 3)           return 6
       if (c >= 3 && c < 6) return 7
-                           return 8
+                                  8
     }
   }
 
@@ -145,6 +145,13 @@ class Grid {
       j = 0
     }
     (best, 0)
+  }
+
+  def isFilled: Boolean = {
+    for (i <- 0 until 9) {
+      if (numbers(i).contains(0)) return false
+    }
+    true
   }
 
   def isCompleted: Boolean = {

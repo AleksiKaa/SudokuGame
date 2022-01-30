@@ -37,13 +37,14 @@ class sudokuButton(g: Grid, val r: Int, val c: Int) extends Button {
   def reInit(n: Int) = {
       initValue = g.cell(r, c)
       t.font = if (isUpdateable) noBold else bold
+      t.foreground = if (isUpdateable) Color.blue else Color.black
       this.text_(s"${n}")
   }
 
   text_(s"${g.cell(r, c)}")
   font = if (isUpdateable) noBold else bold
   background = Color.white
-  foreground = if (this.isUpdateable) Color.blue else Color.black
+  foreground = if (isUpdateable) Color.blue else Color.black
   border = if (Array(0, 2, 4, 6, 8).contains(g.box_(r, c))) BorderFactory.createLineBorder(Color.black, 1)
   else BorderFactory.createLineBorder(Color.black, 3)
   action = new Action(t.text) {
