@@ -8,7 +8,7 @@ import scala.swing._
 class GUI extends MainFrame {
 
   val game = new Grid
-  Utils.randomize(game)
+  Utils.importRandomFromFile(game)
 
   title = "Sudoku!"
 
@@ -46,7 +46,8 @@ class GUI extends MainFrame {
       text = "Randomize"
       action = new Action("Randomize") {
         override def apply(): Unit = {
-          Utils.randomize(game)
+          textBox.text = "Randomizing grid"
+          Utils.importRandomFromFile(game)
           for (i <- 0 until 81) {
             val button = gridView.contents(i).asInstanceOf[sudokuButton]
             button.reInit(game.cell(button.coords))

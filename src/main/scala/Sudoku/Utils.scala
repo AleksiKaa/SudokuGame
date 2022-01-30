@@ -26,6 +26,15 @@ object Utils {
     }
   }
 
+  def importRandomFromFile(g: Grid): Unit = {
+    var i = 0
+    val bufferedSource = io.Source.fromFile("sudoku.csv")
+    val lines = bufferedSource.getLines.toArray
+    val sudoku = lines(Random.nextInt(1 + Random.nextInt(lines.length - 2))).split(",").head
+    importGrid(g, sudoku)
+    bufferedSource.close()
+  }
+
   def solve(g: Grid): Unit = {
     def inner(): Unit = {
       val next = g.weakestCell()
@@ -95,6 +104,7 @@ object Utils {
     false
   }
 
+  //need to implement removing cells and checking for uniqueness
   def randomize(g: Grid): Unit = {
 
     //Set all cells to 0
