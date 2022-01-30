@@ -77,6 +77,7 @@ class GUI extends MainFrame {
           gridView.contents.foreach(b => {
             val sb = b.asInstanceOf[sudokuButton]
             sb.update(game.cell(sb.coords))
+            textBox.text = "Found all placeable digits"
           })
         }
       }
