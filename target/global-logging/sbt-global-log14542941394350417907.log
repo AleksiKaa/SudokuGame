@@ -1,0 +1,103 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(early(addPluginSbtFile="""C:\Users\Aleksi\AppData\Local\Temp\idea1.sbt"""), None, None)
+[debug] > Exec(addPluginSbtFile="""C:\Users\Aleksi\AppData\Local\Temp\idea1.sbt""", None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.4.3 (AdoptOpenJDK Java 11.0.8)
+[debug]       Load.loadUnit: plugins took 68.8107ms
+[debug]       Load.loadUnit: defsScala took 0.1976ms
+[debug] [Loading] Scanning directory C:\Users\Aleksi\.sbt\1.0\plugins
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\Aleksi\.sbt\1.0\plugins, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 14.5648 ms
+[debug]           Load.resolveProject(global-plugins) took 34.9702ms
+[debug]         Load.loadTransitive: finalizeProject(Project(id global-plugins, base: C:\Users\Aleksi\.sbt\1.0\plugins, plugins: List(<none>))) took 70.6667ms
+[debug] [Loading] Done in C:\Users\Aleksi\.sbt\1.0\plugins, returning: (global-plugins)
+[debug]       Load.loadUnit: loadedProjectsRaw took 85.3201ms
+[debug]       Load.loadUnit: cleanEvalClasses took 0.1695ms
+[debug]     Load.loadUnit(file:/C:/Users/Aleksi/.sbt/1.0/plugins/, ...) took 160.3792ms
+[debug]   Load.apply: load took 289.4527ms
+[debug]   Load.apply: resolveProjects took 4.9473ms
+[debug]   Load.apply: finalTransforms took 42.6355ms
+[debug]   Load.apply: config.delegates took 4.9977ms
+[debug]   Load.apply: Def.make(settings)... took 551.7669ms
+[debug]   Load.apply: structureIndex took 70.0362ms
+[debug]   Load.apply: mkStreams took 1.1506ms
+[info] loading global plugins from C:\Users\Aleksi\.sbt\1.0\plugins
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Load.defaultLoad until apply took 1989.9221ms
+[debug]           Load.loadUnit: plugins took 16.8653ms
+[debug]           Load.loadUnit: defsScala took 0.0037ms
+[debug] [Loading] Scanning directory C:\Users\Aleksi\IdeaProjects\sudokuProj\project
+[debug]             Load.loadUnit: mkEval took 6.6731ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\Aleksi\IdeaProjects\sudokuProj\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 1.1956 ms
+[info] loading settings for project sudokuproj-build from idea1.sbt ...
+[debug]               Load.resolveProject(sudokuproj-build) took 1.9198ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id sudokuproj-build, base: C:\Users\Aleksi\IdeaProjects\sudokuProj\project, plugins: List(<none>))) took 3.477ms
+[debug] [Loading] Done in C:\Users\Aleksi\IdeaProjects\sudokuProj\project, returning: (sudokuproj-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 94.077ms
+[debug]           Load.loadUnit: cleanEvalClasses took 3.4392ms
+[debug]         Load.loadUnit(file:/C:/Users/Aleksi/IdeaProjects/sudokuProj/project/, ...) took 115.0769ms
+[debug]       Load.apply: load took 116.0629ms
+[debug]       Load.apply: resolveProjects took 0.0711ms
+[debug]       Load.apply: finalTransforms took 6.4667ms
+[debug]       Load.apply: config.delegates took 0.2857ms
+[debug]       Load.apply: Def.make(settings)... took 53.1923ms
+[debug]       Load.apply: structureIndex took 22.9624ms
+[debug]       Load.apply: mkStreams took 0.0022ms
+[info] loading project definition from C:\Users\Aleksi\IdeaProjects\sudokuProj\project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 369.5478ms
+[debug]     Load.loadUnit: defsScala took 0.0018ms
+[debug] [Loading] Scanning directory C:\Users\Aleksi\IdeaProjects\sudokuProj
+[debug]       Load.loadUnit: mkEval took 0.2044ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\Aleksi\IdeaProjects\sudokuProj, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(org.jetbrains.sbt.StructurePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(org.jetbrains.sbt.IdeaShellPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.StructurePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.IdeaShellPlugin))), Clause(And(Set(Atom(sbt.plugins.CorePlugin), Atom(sbt.plugins.JvmPlugin))),Set(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.SemanticdbPlugin,org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin,sbt.plugins.JUnitXmlReportPlugin,org.jetbrains.sbt.IdeaShellPlugin,org.jetbrains.sbt.StructurePlugin,sbt.plugins.MiniDependencyTreePlugin)
+[debug] Plugins.deducer#function took 1.5502 ms
+[info] loading settings for project sudokuproj from build.sbt ...
+[debug]         Load.resolveProject(sudokuproj) took 19.793ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id sudokuproj, base: C:\Users\Aleksi\IdeaProjects\sudokuProj, plugins: List(<none>))) took 22.3386ms
+[debug] [Loading] Done in C:\Users\Aleksi\IdeaProjects\sudokuProj, returning: (sudokuproj)
+[debug]     Load.loadUnit: loadedProjectsRaw took 65.71ms
+[debug]     Load.loadUnit: cleanEvalClasses took 3.6385ms
+[debug]   Load.loadUnit(file:/C:/Users/Aleksi/IdeaProjects/sudokuProj/, ...) took 439.4257ms
+[debug] Load.apply: load took 440.6673ms
+[debug] Load.apply: resolveProjects took 0.1286ms
+[debug] Load.apply: finalTransforms took 19.4898ms
+[debug] Load.apply: config.delegates took 0.2285ms
+[debug] Load.apply: Def.make(settings)... took 60.5048ms
+[debug] Load.apply: structureIndex took 20.083ms
+[debug] Load.apply: mkStreams took 0.0026ms
+[info] set current project to sudokuProj (in build file:/C:/Users/Aleksi/IdeaProjects/sudokuProj/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(; set ideaPort in Global := 60916 ; idea-shell, None, None)
+[debug] > Exec(set ideaPort in Global := 60916, None, None)
+[info] Defining Global / ideaPort
+[info] The new value will be used by Compile / compile, Test / compile
+[debug] Defining 
+[debug] 	Global / ideaPort
+[debug] 
+[debug] The new value will be used by 
+[debug] 	Compile / compile
+[debug] 	Test / compile
+[info] Reapplying settings...
+[info] set current project to sudokuProj (in build file:/C:/Users/Aleksi/IdeaProjects/sudokuProj/)
+[debug] > Exec(idea-shell, None, None)
